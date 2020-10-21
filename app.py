@@ -21,17 +21,6 @@ app.debug = True
 def index():
     return render_template("index.html")
 
-
-@app.route('/team')
-def team():
-    return render_template("team.html")
-
-
-@app.route('/about')
-def about():
-    return render_template("about.html")
-
-
 @app.route("/generateCaption", methods=["POST"])
 def generateCaption():
     image = request.files['image']
